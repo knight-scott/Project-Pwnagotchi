@@ -1,5 +1,5 @@
-# Project Pwnag0dchi
-Created this since a lot of people were asking about the customized plugins & configurations I use. Following this guide, your Pwnagotchi will look *exactly* as seen on my socials & YouTube videos in ~5mins tops.
+# Pwny Project (0x4Buddy)
+Created this to begin working on Pwnagotchi plug-ins. Forked from SHUR1K-N
 
 You'll also find a complete Pwnagotchi noob build guide + some common troubleshooting methods here.
 
@@ -41,34 +41,44 @@ You'll also find a complete Pwnagotchi noob build guide + some common troublesho
   	- [memtemp-plus elements get cut-off](https://github.com/SHUR1K-N/Project-Pwnag0dchi#memtemp-plus-elements-get-cut-off)
 
 ---
-# Project Pwnag0dchi Modifications
-## Features
-* On-device dictionary attacks automatically upon finding handshakes (against customized, smaller wordlists)
-* Individual toggles for association and deauthentication attacks to choose 1 of 3 attack approaches:
-	* Fully aggressive (association + deauthentication attacks)
-	* Less aggressive (either association or deauthentication attack)
-	* Fully passive (no attacks, just passive handshake capture)
-* Downloadable handshakes from web UI (fixed)
-* UI elements tweaked AF (positions, sizes, fonts, etc.)
-	* Space added to "CH" value to accomodate 5GHz channels without overlap
-* Plugin modifications (for cosmetic purposes, decluttering, and slightly improved functionality (maybe))
-* Added information to the screen:
-	* Latest cracked handshake in plain-text (as per WPA-sec)
- 	* Level & XP bar (collect handshakes to gain XP and level up)
-	* Enabled attacks (association, deauthentication, or both, or none)
- 	* Hardware monitoring (current memory usage, CPU usage, CPU frequency, and temperature)
-  	* Internet connection/sharing status
-  	* Current interface's IP address (helps with connecting via SSH / web UI)
-* More stuff I may be forgetting
+# Project Modifications
+> [!note] Unchanged
+	Currently, modifications are the original sources. This will be updated with my changes as I work through different plug-ins. 
 
-## Sick Feature Showcase & Tutorial Video
+## Features Advertised (Checked off when tested)
+- [ ] On-device dictionary attacks automatically upon finding handshakes (against customized, smaller wordlists)
+- [ ] Individual toggles for association and deauthentication attacks to choose 1 of 3 attack approaches:
+	- [ ] Fully aggressive (association + deauthentication attacks)
+	- [ ] Less aggressive (either association or deauthentication attack)
+	- [ ] Fully passive (no attacks, just passive handshake capture)
+- [ ] Downloadable handshakes from web UI (fixed)
+- [ ] UI elements tweaked AF (positions, sizes, fonts, etc.)
+	- [ ] Space added to "CH" value to accomodate 5GHz channels without overlap
+- [ ] Plugin modifications (for cosmetic purposes, decluttering, and slightly improved functionality (maybe))
+- [ ] Added information to the screen:
+	- [ ] Latest cracked handshake in plain-text (as per WPA-sec)
+ 	- [ ] Level & XP bar (collect handshakes to gain XP and level up)
+	- [ ] Enabled attacks (association, deauthentication, or both, or none)
+ 	- [ ] Hardware monitoring (current memory usage, CPU usage, CPU frequency, and temperature)
+  	- [ ] Internet connection/sharing status
+  	- [ ] Current interface's IP address (helps with connecting via SSH / web UI)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/rNAYWvSMP6o/maxresdefault.jpg)](https://www.youtube.com/watch?v=rNAYWvSMP6o)
+## Installing
+> [!note] Advertised Steps
+	1. Copy the files from the ″Plugins″ directory of this GitHub repo to `/usr/local/share/pwnagotchi/custom-plugins/`
+	2. Copy the files from the ″Configurations″ directory of this GitHub repo to `/etc/pwnagotchi/`
+	3. Apply all changes by restarting your Pwnagotchi
 
-## Installing Project Pwnag0dchi
-1. Copy the files from the ″Plugins″ directory of this GitHub repo to `/usr/local/share/pwnagotchi/custom-plugins/`
-2. Copy the files from the ″Configurations″ directory of this GitHub repo to `/etc/pwnagotchi/`
-3. Apply all changes by restarting your Pwnagotchi
+1. Install current version from Jayofelony's [Release](https://github.com/jayofelony/pwnagotchi/releases) page.
+2. Follow the [wiki](https://github.com/jayofelony/pwnagotchi/wiki) to install basic working version
+> [!tip] Connecting to pc
+	Clear any existing ethernet connections from Network Manager. Run `sudo ipconfig` before connecting pwny to note any existing profiles. Run the set up wizard for a working initial config.
+	```sh
+	sudo pwnagotchi --wizard
+	```
+
+> [!warning]
+	Use 'waveshare_3' for Display type.
 
 ### Login Credentials (Web UI)
 `changeme:changeme`
@@ -82,7 +92,7 @@ Then make the following additions / changes:
 
 1. `main.name` should be whatever you'd like to name your Pwnagotchi (example: Pwnag0dchi)
 2. `main.whitelist.#0` & `main.plugins.grid.exclude` should be the SSID of your home Wi-Fi network, so your Pwnagotchi does not attack it (example: Shuriken-WiFi_2.4GHz)
-3. `main.plugins.wpa-sec.api_key` should be your WPA-sec API key (go [here first](https://wpa-sec.stanev.org) and click on "Get key" to get your free API key e-mailed to you
+3. `main.plugins.wpa-sec.api_key` should be your WPA-sec API key (go [here first](https://wpa-sec.stanev.org)) and click on "Get key" to get your free API key e-mailed to you
 	> NOTE: When copy-pasting the API key to `main.plugins.wpa-sec.api_key`, make sure there are no spaces at the beginning or end of the API key
 4. Restart the Pwnagotchi service to apply changes using `sudo systemctl restart pwnagotchi.service`. On the web UI, this can be done by clicking ″Save and Restart″ at the top in the webcfg plugin
 
@@ -143,7 +153,7 @@ To FTP into your Pwnagotchi as a root user, you'll first need to initialize the 
 Tutorial: https://www.youtube.com/watch?v=X-5jN0WjurQ&t=88s
 
 
-## Setting Up Internet-Sharing (Internet access for Pwnagotchi)
+## Setting Up Internet-Sharing (Internet access for Pwnagotchi) 
 1. Connect your Pwnagotchi (data port, not power)
 2. Download `win_connection_share.ps1` from this GitHub repo ("Internet Sharing" directory)
 3. Open PowerShell as an administrator (right-click > "Run as administrator")

@@ -1,14 +1,14 @@
-main.name = "Pwnag0dchi"
+main.name = "0x4Buddy"
 main.lang = "en"
 main.whitelist = [
- "yourHomeSSIDHere",
+ "Gay",
  "ANOTHER_EXAMPLE_NETWORK",
- "fo:od:ba:be:fo:od",
+ "B0:E4:D5:50:1C:CA",
  "fo:od:ba",
 ]
-main.plugins.grid.enabled = false
-main.plugins.grid.report = false
-main.plugins.grid.exclude = [ "yourHomeSSIDHere",]
+main.plugins.grid.enabled = true
+main.plugins.grid.report = true
+main.plugins.grid.exclude = [ "Gay",]
 
 main.plugins.auto-update.enabled = true
 main.plugins.auto-update.install = true
@@ -26,22 +26,7 @@ main.plugins.bt-tether.devices.android-phone.max_tries = 6
 main.plugins.bt-tether.devices.android-phone.share_internet = true
 main.plugins.bt-tether.devices.android-phone.priority = 1
 
-main.plugins.bt-tether.devices.ios-phone.enabled = false
-main.plugins.bt-tether.devices.ios-phone.search_order = 2
-main.plugins.bt-tether.devices.ios-phone.mac = ""
-main.plugins.bt-tether.devices.ios-phone.ip = "175.20.10.6"
-main.plugins.bt-tether.devices.ios-phone.netmask = 24
-main.plugins.bt-tether.devices.ios-phone.interval = 5
-main.plugins.bt-tether.devices.ios-phone.scantime = 20
-main.plugins.bt-tether.devices.ios-phone.max_tries = 0
-main.plugins.bt-tether.devices.ios-phone.share_internet = false
-main.plugins.bt-tether.devices.ios-phone.priority = 999
-
 main.plugins.fix_services.enabled = true
-
-main.plugins.gdrivesync.enabled = false
-main.plugins.gdrivesync.backupfiles = [ "",]
-main.plugins.gdrivesync.backup_folder = "PwnagotchiBackups"
 
 main.plugins.logtail.enabled = true
 main.plugins.logtail.max-lines = 10000
@@ -89,7 +74,7 @@ main.plugins.pisugar2.shutdown = 5
 main.plugins.pisugar2.sync_rtc_on_boot = false
 
 main.plugins.ups_hat_c.enabled = false
-main.plugins.ups_hat_c.label_on = true
+main.plugins.ups_hat_c.label_on = false
 main.plugins.ups_hat_c.shutdown = 5
 main.plugins.ups_hat_c.bat_x_coord = 140
 main.plugins.ups_hat_c.bat_y_coord = 0
@@ -106,13 +91,13 @@ main.plugins.wigle.donate = false
 main.plugins.net-pos.enabled = false
 main.plugins.net-pos.api_key = "test"
 
-main.plugins.IPDisplay.enabled = true
+main.plugins.IPDisplay.enabled = false
 main.plugins.IPDisplay.skip_devices = [ "lo",]
 
 main.plugins.display-password.enabled = true
 main.plugins.display-password.orientation = "horizontal"
 
-main.plugins.internet-connection.enabled = true
+main.plugins.internet-connection.enabled = false
 
 main.plugins.cuff.enabled = false
 main.plugins.cuff.whitelist = ""
@@ -134,7 +119,7 @@ main.plugins.exp.exp_x_coord = 196
 main.plugins.exp.exp_y_coord = 72
 main.plugins.exp.bar_symbols_count = 8
 
-main.plugins.enable_deauth.enabled = false
+main.plugins.enable_deauth.enabled = true
 
 main.plugins.enable_assoc.enabled = true
 
@@ -146,9 +131,10 @@ main.custom_plugin_repos = [
  "https://github.com/Sniffleupagus/pwnagotchi_plugins/archive/master.zip",
  "https://github.com/NeonLightning/pwny/archive/master.zip",
  "https://github.com/marbasec/UPSLite_Plugin_1_3/archive/master.zip",
+ "https://github.com/wpa-2/Pwnagotchi-Plugins/archive/master.zip",
+ "https://github.com/cyberartemio/wardriver-pwnagotchi-plugin/archive/main.zip"
 ]
 main.custom_plugins = "/usr/local/share/pwnagotchi/custom-plugins/"
-main.plugin.gdrivesync.interval = 1
 
 main.iface = "wlan0mon"
 main.mon_start_cmd = "/usr/bin/monstart"
@@ -165,7 +151,7 @@ ui.display.color = "black"
 ui.display.rotation = 180
 
 ui.invert = false
-ui.fps = 0
+ui.fps = 1
 ui.font.name = "DejaVuSansMono"
 ui.font.size_offset = 0
 
